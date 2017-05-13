@@ -20,7 +20,7 @@ var TaskForm = React.createClass({
 
   handleSubmit: function(e){
     e.preventDefault();
-    $.post( '',
+    $.post( '/tasks/',
           {task: this.state},
           function(data){
             this.props.handleNewTask(data);
