@@ -1,42 +1,23 @@
-.page-container {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: image-url('typewriter-801921_1920.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+h1, h2, h3, h4 {
+  font-family: 'Abril Fatface', cursive;
 }
 
-.task-container {
-  padding: 5% 10% 10% 10%;
+form, table, p, a {
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.login-button {
+  position: absolute;
+  // z-index: 100;
+  top: 1em;
+  right: 1em;
+  padding: 0.6em 1em;
   background-color: rgba(255, 255, 255, 0.91);
-  // border: 1.1px solid gray;
+    // border: 1.1px solid gray;
   box-shadow: 3px 3px 6px 0px grey;
 }
 
-.tasks h2 {
-  text-align: center;
-}
-
-.input-form {
-  display: flex;
-  justify-content: space-around;
-  margin: 5%;
-  .form-control {
-    border: 1px solid #838383;
-  }
-  .form-group {
-    margin-left: 2%;
-  }
-}
-
-.table-row>td {
-  vertical-align: middle !important;
-}
-
-table td:last-child {
-  display: flex;
-  justify-content: space-around;
+.notice, .alert {
+  position: absolute;
 }
