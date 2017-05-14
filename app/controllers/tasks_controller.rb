@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_action :current_task, only: [:update, :destroy]
 
   def index
-    @tasks = Task.all
+    @tasks = Task.select {|task| task.user_id == current_user.id}
   end
 
   def create
