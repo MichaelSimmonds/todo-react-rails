@@ -1,24 +1,8 @@
-# README
+# todo-react-rails
+## Readme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hi there, this is a simple todo list built with RoR and React. It allows users to sign up and have a simple, private task list.
 
-Things you may want to cover:
+It is currently hosted at todo-react-rails.mikesimmonds.io on a free Heroku dyno. This may mean it will take 20s to load - but will run smoothly after initial startup.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is not really suitable for mobile.
