@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootstrap-datepicker3";
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat');
 @mixin phone {
   @media (max-width: 576px) {
