@@ -20,6 +20,7 @@
   background-color: rgba(255, 255, 255, 0.91);
   // border: 1.1px solid gray;
   box-shadow: 3px 3px 6px 0px grey;
+
 }
 
 .tasks h2 {
@@ -28,6 +29,7 @@
 
 .input-form {
   display: flex;
+  flex-wrap: no-wrap;
   justify-content: space-around;
   margin: 5%;
   .form-control {
@@ -35,6 +37,15 @@
   }
   .form-group {
     margin-left: 2%;
+  }
+  .btn {
+    // display: none;
+    text-align: center;
+    margin: auto;
+  }
+  @include phone {
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -44,5 +55,9 @@
 
 table td:last-child {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  a{
+    margin: 2px auto
+  }
 }

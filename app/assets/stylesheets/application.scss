@@ -1,4 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat');
+@mixin phone {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
 @import "./**/*";
