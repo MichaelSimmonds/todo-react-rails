@@ -8,6 +8,7 @@ var TaskForm = React.createClass({
   },
 
   handleChange: function(e){
+    console.log(e.target.value);
     name = e.target.name;
     obj = {};
     obj[name] = e.target.value;
@@ -40,15 +41,15 @@ var TaskForm = React.createClass({
         </input>
       </div>
       <div className='form-group'>
-        <input type='date' className='form-control'
-               placeholder='Due Date' name='due_date'
-               value={this.state.due_date} onChange={this.handleChange}>
+        <input type='text' className='form-control datepicker' data-date-format='yyyy-mm-dd' data-provide="datepicker"
+          placeholder='Due Date' name='due_date'
+          value={this.state.due_date} onChange={this.handleChange} onBlur={this.handleChange}>
         </input>
       </div>
       <div className='form-group'>
-        <input type='text' className='form-control'
-               placeholder='Description' name='description'
-               value={this.state.description} onChange={this.handleChange}>
+        <input type='text'  className='form-control'
+          placeholder='Description' name='description'
+          value={this.state.description} onChange={this.handleChange}>
         </input>
       </div>
       <div className='form-group'>
