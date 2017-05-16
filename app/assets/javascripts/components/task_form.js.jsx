@@ -52,9 +52,9 @@ var TaskForm = React.createClass({
         </input>
       </div>
       <div className='form-group'>
-        <input type='submit' className='btn btn-primary'
-               disabled={!this.valid()}>
-        </input>
+        <button type='submit' className='btn btn-primary'
+               disabled={!this.valid()}> Submit
+        </button>
       </div>
     </form>
     );
