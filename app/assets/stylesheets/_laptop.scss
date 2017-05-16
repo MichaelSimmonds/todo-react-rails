@@ -1,0 +1,30 @@
+.laptop {
+  width: 40%;
+  margin: auto;
+  height: auto;
+  position: relative;
+  img {
+    width: 100%;
+  }
+}
+
+.screen {
+  width: 80%;
+  height: 85%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 4%;
+  left: 10%;
+  z-index: -1;
+  overflow: hidden;
+  video {
+    min-height: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .laptop{
+    width: 80%;
+  }
+}
