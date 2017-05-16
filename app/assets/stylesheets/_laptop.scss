@@ -23,6 +23,11 @@
   }
 }
 
+@media (max-width: 876px) {
+  .laptop{
+    width: 50%;
+  }
+}
 @media (max-width: 576px) {
   .laptop{
     width: 80%;
