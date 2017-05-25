@@ -38,15 +38,24 @@ var Task = React.createClass({
 
   taskRow: function(){
     return(
-      <tr className="table-row">
-        <td>{this.props.task.title}</td>
-        <td>{this.props.task.due_date}</td>
-        <td>{this.props.task.description}</td>
-        <td>
-          <a className="btn btn-danger" onClick={this.handleDelete}>Delete</a>
-          <a className="btn btn-primary" onClick={this.handleToggle}>Edit</a>
-        </td>
-      </tr>
+      <div className="todo-card">
+        <div className="text-container">
+          <div>
+            <span className="title">{this.props.task.title}</span>
+          </div>
+          <div>
+            <span className="description">{this.props.task.description}</span>
+          </div>
+        </div>
+        <div className="date-button-container">
+          <span className="date">{this.props.task.due_date}</span>
+          <div className="buttons">
+            <a className="btn btn-danger" onClick={this.handleDelete}><i className="fa fa-trash" aria-hidden="true"></i>
+            </a>
+            <a className="btn btn-primary" onClick={this.handleToggle}><i className="fa fa-pencil" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
     );
   },
 

@@ -37,6 +37,9 @@
   }
   .form-group {
     margin-left: 2%;
+    @include phone {
+      margin: 2% auto;
+    }
   }
   .btn {
     // display: none;

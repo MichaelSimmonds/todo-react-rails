@@ -33,30 +33,32 @@ var TaskForm = React.createClass({
 
   render : function(){
     return (
-    <form className="form-inline input-form" onSubmit={this.handleSubmit}>
-      <div className="form-group">
-        <input type='text' className='form-control'
-               placeholder='Title' name='title'
-               value={this.state.title} onChange={this.handleChange} autoFocus="autofocus">
-        </input>
-      </div>
+    <form className="input-form" onSubmit={this.handleSubmit}>
+
+        <div className="form-group">
+          <input type='text' className='form-control'
+                 placeholder='Title (30 chars max)' name='title'
+                 value={this.state.title} onChange={this.handleChange} autoFocus="autofocus" maxLength="30">
+          </input>
+          <input type='text' className='form-control datepicker' data-date-format='yyyy-mm-dd' data-provide="datepicker"
+            placeholder='Due Date' name='due_date'
+            value={this.state.due_date} onChange={this.handleChange} onBlur={this.handleChange}>
+          </input>
+        </div>
+
       <div className='form-group'>
-        <input type='text' className='form-control datepicker' data-date-format='yyyy-mm-dd' data-provide="datepicker"
-          placeholder='Due Date' name='due_date'
-          value={this.state.due_date} onChange={this.handleChange} onBlur={this.handleChange}>
-        </input>
+        <textarea  className='form-control'
+          placeholder='Description (120 chars max)' name='description'
+          value={this.state.description} onChange={this.handleChange}  maxLength="120">
+        </textarea>
       </div>
-      <div className='form-group'>
-        <input type='text'  className='form-control'
-          placeholder='Description' name='description'
-          value={this.state.description} onChange={this.handleChange}>
-        </input>
-      </div>
-      <div className='form-group'>
-        <button type='submit' className='btn btn-primary'
-               disabled={!this.valid()}> Submit
-        </button>
-      </div>
+
+        <div className='form-group'>
+          <button type='submit' className='btn btn-primary'
+                 disabled={!this.valid()}> Submit
+          </button>
+        </div>
+
     </form>
     );
   }

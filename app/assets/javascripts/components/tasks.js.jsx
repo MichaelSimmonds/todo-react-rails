@@ -32,21 +32,11 @@ var Tasks = React.createClass({
       <div className="tasks">
           <h2>Tasks for today</h2>
         <TaskForm handleNewTask={this.addTask} />
-        <table className="table table-bordered">
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Due Date</th>
-              <th>Description</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.tasks.map(function(task){
-              return <Task key={task.id} task={task} handleDeleteTask={this.deleteTask} handleEditTask={this.updateTask} />
-            }.bind(this))}
-          </tbody>
-        </table>
+        <div>
+          {this.state.tasks.map(function(task){
+            return <Task key={task.id} task={task} handleDeleteTask={this.deleteTask} handleEditTask={this.updateTask} />
+          }.bind(this))}
+        </div>
       </div>
 
     );

@@ -1,0 +1,52 @@
+.todo-card {
+  // position: relative;
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  align-content: space-between;
+  border: 1px solid black;
+  padding: 0.5em;
+  margin: 1em;
+  .text-container {
+    max-width: 70%;
+    padding: 0.5em;
+    flex-grow: 3;
+    display: inline-block;
+    // border: 1px solid black;
+    .title {
+      font-size: 1.4em;
+    }
+    .description {
+      font-size: 1em;
+    }
+  }
+  .date-button-container {
+    position: relative;
+    // border: 1px solid black;
+    text-align: center;
+    flex-grow: 1;
+    align-items: stretch;
+    padding: 0.5em;
+    .date {
+        width: 80%;
+        margin-bottom: 1.5em;
+      }
+    .buttons {
+      // position: relative;
+      // bottom: 0px;
+      // display: flex;
+      // justify-content: center;
+      margin-top: 0.3em;
+      @media (max-width: 500px){
+        flex-wrap: wrap;
+      }
+      a {
+        margin: 0.2em;
+        width: 1em;
+        min-width: 45px;
+        height: 1em;
+        min-height:45px;
+      }
+    }
+  }
+}
