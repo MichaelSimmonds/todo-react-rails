@@ -61,31 +61,31 @@ var Task = React.createClass({
 
   taskForm: function() {
   return(
-    <tr>
-      <td>
-        <input className='form-control' type='text'
-          defaultValue={this.props.task.title} ref='title'>
-        </input>
-      </td>
-      <td>
+
+    <div className="todo-card">
+      <div className="text-container">
+        <div>
+          <input className='form-control' type='text'
+            defaultValue={this.props.task.title} ref='title'>
+          </input>
+        </div>
+        <div>
+          <textarea className='form-control' type='text'
+                 defaultValue={this.props.task.description} ref='description'>
+          </textarea>
+        </div>
+      </div>
+      <div className="date-button-container">
         <input className='form-control' type='date'
                defaultValue={this.props.task.due_date} ref='due_date'>
         </input>
-      </td>
-      <td>
-        <input className='form-control' type='text'
-               defaultValue={this.props.task.description} ref='description'>
-        </input>
-      </td>
-      <td className="abuttons">
-        <a className='btn btn-default' onClick={this.handleEdit}>
-          Update
-        </a>
-        <a className='btn btn-danger' onClick={this.handleToggle}>
-          Cancel
-        </a>
-      </td>
-    </tr>
+        <div className="buttons">
+          <a className="btn btn-danger" onClick={this.handleToggle}><i className="fa fa-ban" aria-hidden="true"></i>
+          </a>
+          <a className="btn btn-primary" onClick={this.handleEdit}><i className="fa fa-floppy-o" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
   );
 },
 

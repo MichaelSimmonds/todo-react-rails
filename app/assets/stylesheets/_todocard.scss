@@ -19,6 +19,9 @@
     .description {
       font-size: 1em;
     }
+    textarea {
+      margin-top: 0.2em;
+    }
   }
   .date-button-container {
     position: relative;
@@ -46,7 +49,16 @@
         min-width: 45px;
         height: 1em;
         min-height:45px;
+        i {
+          margin-top: 40%;
+        }
       }
     }
   }
+}
+
+.vertical-form-elements {
+  flex-direction: column;
+    display: flex;
+    justify-content: space-around;
 }

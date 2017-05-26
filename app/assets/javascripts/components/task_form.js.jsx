@@ -35,7 +35,7 @@ var TaskForm = React.createClass({
     return (
     <form className="input-form" onSubmit={this.handleSubmit}>
 
-        <div className="form-group">
+        <div className="form-group vertical-form-elements">
           <input type='text' className='form-control'
                  placeholder='Title (30 chars max)' name='title'
                  value={this.state.title} onChange={this.handleChange} autoFocus="autofocus" maxLength="30">
@@ -49,11 +49,11 @@ var TaskForm = React.createClass({
       <div className='form-group'>
         <textarea  className='form-control'
           placeholder='Description (120 chars max)' name='description'
-          value={this.state.description} onChange={this.handleChange}  maxLength="120">
+          value={this.state.description} onChange={this.handleChange}  maxLength="120" rows="4" cols="50">
         </textarea>
       </div>
 
-        <div className='form-group'>
+        <div className='form-group vertical-form-elements'>
           <button type='submit' className='btn btn-primary'
                  disabled={!this.valid()}> Submit
           </button>
